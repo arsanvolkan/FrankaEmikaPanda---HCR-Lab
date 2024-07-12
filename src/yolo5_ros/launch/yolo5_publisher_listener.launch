@@ -1,0 +1,4 @@
+<launch>
+  <node name="yolo5_ros_publisher" pkg="yolo5_ros" type="yolo5_ros_publisher.py" output="screen"/>
+  <node name="object_listener" pkg="yolo5_ros" type="object_listener.py" output="screen"/>
+</launch>

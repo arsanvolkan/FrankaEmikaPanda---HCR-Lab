@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+	<arg name="base_trajectory"/>
+  	<arg name="goal_object"/>
+	<node name="dmp" pkg="dmp" type="dmp_server" respawn="false" output="screen"/>
+</launch>

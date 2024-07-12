@@ -1,0 +1,27 @@
+# Waypoints describe the desired motion trajectory:
+#  - time [s]: can be either a single value or an interval for which joint_positions hold
+#  - joint_positions:
+#     - first synergy hand closure [0,1];
+#     - thumb-little manipulation offset [-1,1];
+#  - joint_velocities: optional, use it only if you want a nonzero value
+#     - first synergy hand closure [0,1]/s;
+#     - thumb-little manipulation offset [-1,1]/s;
+#  - joint_accelerations: optional, use it only if you want a nonzero value
+#     - first synergy hand closure [0,1]/s^2;
+#     - thumb-little manipulation offset [-1,1]/s^2;
+#
+# It is worth noting that, if specified, joint_positions, joint_velocities and joint_accelerations must be of size two.
+
+waypoints:
+  -
+    time: [2.0]
+    joint_positions:
+      qbhand2m: [0.0, 0.0]
+  -
+    time: [4.0, 4.2]
+    joint_positions:
+      qbhand2m: [0.8, -0.5]
+  -
+    time: [6.0, 6.2]
+    joint_positions:
+      qbhand2m: [0.8, 0.5]

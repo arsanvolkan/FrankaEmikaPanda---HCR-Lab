@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch> 
+	 <arg name="goal_object" />
+ 	 <arg name="demo_trajectory_file"/>
+
+	<param name="goal_object" value="$(arg goal_object)" />
+	<param name="demo_trajectory_file" value="$(arg demo_trajectory_file)" />
+	
+	<node name="dmp" pkg="dmp" type="dmp_server" respawn="false" output="screen"/>
+	<node name="dmp_variable_parameters" pkg="dmp" type="dmp_variable_parameters.py" output="screen"/>
+</launch>
